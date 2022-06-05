@@ -1,7 +1,6 @@
 import { cpus } from 'os'
 import { Worker } from 'worker_threads'
 
-console.log(10 + cpus().length);
 export const performCalculations = async () => {
     let arr = []
     for (let i = 10; i < 10 + cpus().length; i++) {
