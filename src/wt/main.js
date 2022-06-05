@@ -5,7 +5,7 @@ export const performCalculations = async () => {
     let arr = []
     for (let i = 10; i < 10 + cpus().length; i++) {
         arr.push(new Promise((resolve, reject) => {
-            const worker = new Worker('./worker.js', {
+            const worker = new Worker('./src/wt/worker.js', {
                 workerData : i
             })
             worker.on('message', message => {

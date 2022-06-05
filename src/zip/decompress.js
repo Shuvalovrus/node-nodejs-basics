@@ -3,8 +3,8 @@ import { createUnzip } from 'zlib'
 import { pipeline } from "stream"
 
 export const decompress = async () => {
-    const readStream = createReadStream('./files/archive.gz');
-    const writeStream = createWriteStream('./files/fileToCompress.txt');
+    const readStream = createReadStream('src/zip/files/archive.gz');
+    const writeStream = createWriteStream('src/zip/files/fileToCompress.txt');
 
     const transform = createUnzip()
 
