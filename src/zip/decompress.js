@@ -2,7 +2,7 @@ import { createReadStream, createWriteStream } from "fs";
 import { createUnzip } from 'zlib'
 import { pipeline } from "stream"
 
-export const decompress = (async () => {
+export const decompress = async () => {
     const readStream = createReadStream('./files/archive.gz');
     const writeStream = createWriteStream('./files/fileToCompress.txt');
 
@@ -17,5 +17,6 @@ export const decompress = (async () => {
         }
     )
 
-})();
+};
 
+decompress()
