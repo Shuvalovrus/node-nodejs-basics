@@ -1,3 +1,11 @@
 export const parseArgs = () => {
-    // Write your code here 
+
+    process.argv.forEach((item, index) => {
+        if (item.includes('prop')) {
+            console.log(`${item} is ${process.argv[index + 1]}`)
+        }
+    })
+
 };
+
+parseArgs()
